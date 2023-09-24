@@ -1,13 +1,139 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+nav {
+  height: 70px !important;
+  width: 100% !important;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+nav .myRow {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Croissant One", cursive;
+  color: rgba(71, 61, 139, 0.872);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav a {
+  text-decoration: none;
+  font-size: 20px !important;
+  margin-right: 20px !important;
+  color: darkslateblue;
 }
+nav .cartDiv {
+  position: relative;
+  width: fit-content;
+}
+nav .cartDiv svg {
+  font-size: 30px;
+}
+nav .cartDiv span {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 22px;
+  height: 22px;
+  padding: 2px;
+  border-radius: 50%;
+  color: white;
+  background-color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    margin-top: 15px !important;
+    padding: 5px 20px !important;
+    min-height: 100px !important;
+  }
+  nav .navbar-nav a {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 350px) {
+  nav .logo {
+    font-size: 18px !important;
+    font-weight: 600;
+  }
+  nav .myLinks a {
+    font-size: 15px !important;
+    font-weight: 600;
+  }
+}
+/* ==============trable cart============ */
+.table {
+  width: 100% !important;
+  margin: 10px auto !important;
+  overflow: auto !important;
+}
+@media (max-width: 768px) {
+  .table {
+    display: block !important;
+  }
+}
+.table tr th,
+.table tr td {
+  padding: 10px !important;
+  text-align: center !important;
+}
+.table .in-deBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.table .in-deBtn button {
+  background-color: darkslateblue;
+  color: white;
+}
+/* =============productDetails======= */
+.productDetails .rightSide h4 {
+  color: darkslateblue;
+  margin-bottom: 15px;
+}
+.productDetails .rightSide h4 span {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #16081cc9;
+}
+.productDetails .rightSide h4 p {
+  font-size: 17px;
+  text-transform: capitalize;
+  color: #16081cc9;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.productDetails .rightSide .desc p {
+  margin-top: 10px;
+}
+.productDetails .leftSide img {
+  border: 3px solid darkslateblue;
+  box-shadow: 0px 0px 4px rgba(71, 61, 139, 0.56);
+  border-radius: 5px;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .productDetails .row {
+    justify-content: center !important;
+  }
+  .productDetails .leftSide,
+  .productDetails .rightSide {
+    margin-bottom: 40px;
+  }
+}
+/* =============productDetails======= */
